@@ -1419,9 +1419,9 @@ cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/aurorae
 print_info "Cachyos Hello Will Now Open Please Close To Continue..."
 cachyos-hello > /dev/null 2>&1
 print_status "Proceeding..."
-sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/installspitfiretheme.sh
+sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/installapextheme.sh
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/start.sh
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && ./installspitfiretheme.sh
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && ./installapextheme.sh
 print_info "Theme Applied..."
 
 print_section "CachyOS Conversion Complete!!"
