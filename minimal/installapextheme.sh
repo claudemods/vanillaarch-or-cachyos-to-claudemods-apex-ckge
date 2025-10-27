@@ -7,7 +7,7 @@ NC='\033[0m' # No Color
 SCRIPT_DIR=$(pwd)
 CONFIG_PATH="${XDG_CONFIG_HOME:-$HOME/.config}"
 DATA_PATH="${XDG_DATA_HOME:-$HOME/.local/share}"
-CONFIG_FOLDER="$SCRIPT_DIR/spitfire-theme"
+CONFIG_FOLDER="$SCRIPT_DIR/apex-theme"
 
 LOG_TEXT=""
 
