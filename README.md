@@ -52,7 +52,13 @@
 
 <div align="center">
   
+```bash
+  
 ## Installation Methods
+
+apex ckge minimal
+
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/claudemods/vanillaarch-or-cachyos-to-claudemods-apex-ckge/refs/heads/main/minimal/install-from-github.sh)"
 
 
 
