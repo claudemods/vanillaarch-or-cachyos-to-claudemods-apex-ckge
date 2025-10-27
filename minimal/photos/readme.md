@@ -1,6 +1,2 @@
 
-
-
-
-<img width="1280" height="800" alt="Screenshot_archlinux_2025-09-28_14:56:23" src="https://github.com/user-attachments/assets/bd14964a-23ec-4b14-9b14-b0d27c05c623" />
-
+<img width="1280" height="800" alt="apex" src="https://github.com/user-attachments/assets/67dac877-f39e-4e6a-943d-0c94160cfb71" />
