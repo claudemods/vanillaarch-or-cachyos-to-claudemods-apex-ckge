@@ -1368,28 +1368,28 @@ sudo pacman -R firefox
 
 
 print_info "Configuring GRUB bootloader..."
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/grub /etc/default
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/grub /etc/default
 print_status "GRUB configuration copied"
 
 print_info "Generating new GRUB configuration..."
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/10_linux /etc/grub.d
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/grub.cfg /boot/grub
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/cachyos /usr/share/grub/themes
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/10_linux /etc/grub.d
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/grub.cfg /boot/grub
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/cachyos /usr/share/grub/themes
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 print_status "GRUB configuration updated"
 
 print_info "Setting Plymouth boot animation..."
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/term.sh /usr/local/bin
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/term.sh /usr/local/bin
 sudo chmod +x /usr/local/bin/term.sh
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/term.service /etc/systemd/system/
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/term.service /etc/systemd/system/
 sudo systemctl enable term.service >/dev/null 2>&1
 sudo plymouth-set-default-theme -R cachyos-bootanimation
 print_status "Plymouth theme configured"
 
 print_info "Configuring Fish shell..."
 mkdir /home/$USER/.config/fish
-cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/config.fish /home/$USER/.config/fish/config.fish
-cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/.zshrc /home/$USER/.zshrc
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/config.fish /home/$USER/.config/fish/config.fish
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/.zshrc /home/$USER/.zshrc
 sudo chmod +X /home/$USER/.config/fish/config.fish
 chsh -s $(which fish)
 print_status "Fish configuration applied"
@@ -1402,26 +1402,26 @@ mkdir /home/$USER/.local/bin
 mkdir /home/$USER/.local/share/plasma
 sudo mkdir /etc/sddm.conf.d
 cd /home/$USER/apps && sudo unzip symlinks.zip -d /home/$USER/.local/bin && sudo unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip Arch-Systemtool.zip -d /opt && sudo unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal && unzip kio.zip -d /home/$USER/.local/share
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal && unzip color-schemes.zip -d /home/$USER/.local/share
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && unzip kio.zip -d /home/$USER/.local/share
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && unzip color-schemes.zip -d /home/$USER/.local/share
 sudo chown $USER /home/$USER/.local/share/plasma
 sudo chown $USER /home/$USER/.local/share/color-schemes
 sudo chown $USER /home/$USER/.local/share/kio
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal && sudo unzip ApexLogin2.zip -d /usr/share/sddm/themes
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/kde_settings.conf /etc/sddm.conf.d
-unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/autostart.zip -d /home/$USER/.config
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && sudo unzip ApexLogin2.zip -d /usr/share/sddm/themes
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/kde_settings.conf /etc/sddm.conf.d
+unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/autostart.zip -d /home/$USER/.config
 sudo chmod +x /home/$USER/.local/.config/autostart
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal && unzip apex-theme.zip -d /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && unzip apex-theme.zip -d /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal
 plasma-apply-colorscheme Apex > /dev/null 2>&1
 mkdir /home/$USER/.icons
 unzip Windows10Dark.zip -d /home/$USER/.icons > /dev/null 2>&1
-cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/aurorae /home/$USER/.local/share
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/aurorae /home/$USER/.local/share
 print_info "Cachyos Hello Will Now Open Please Close To Continue..."
 cachyos-hello > /dev/null 2>&1
 print_status "Proceeding..."
-sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/installspitfiretheme.sh
-sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal/start.sh
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/kdegrub-minimal && ./installspitfiretheme.sh
+sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/installspitfiretheme.sh
+sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/start.sh
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && ./installspitfiretheme.sh
 print_info "Theme Applied..."
 
 print_section "CachyOS Conversion Complete!!"
