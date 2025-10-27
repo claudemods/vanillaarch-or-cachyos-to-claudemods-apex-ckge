@@ -1409,8 +1409,6 @@ sudo chown $USER /home/$USER/.local/share/color-schemes
 sudo chown $USER /home/$USER/.local/share/kio
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && sudo unzip ApexLogin2.zip -d /usr/share/sddm/themes
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/kde_settings.conf /etc/sddm.conf.d
-sudo rm -rf /home/$USER/.local/share/kactivitymanagerd
-unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/kactivitymanagerd.zip -d /home/$USER/.local/share
 unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/autostart.zip -d /home/$USER/.config
 sudo chmod +x /home/$USER/.local/.config/autostart
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && unzip apex-theme.zip -d /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal
