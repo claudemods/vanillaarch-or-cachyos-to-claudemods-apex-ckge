@@ -10,7 +10,7 @@
 <a href="https://archlinux.org/" target="_blank"><img src="https://img.shields.io/badge/OS-Arch-0000FF?style=for-the-badge&logo=linux" /></a>
 <a href="https://cachyos.org/" target="_blank"><img src="https://img.shields.io/badge/DISTRO-CachyOS-00FFFF?style=for-the-badge&logo=CachyOS" /></a>
 
-##  [Click Here For Photos](https://github.com/claudemods/vanillaarch-or-cachyos-to-claudemods-apex-ckge/Photos)
+##  [Click Here For Photos](https://github.com/claudemods/vanillaarch-or-cachyos-to-claudemods-apex-ckge/blob/main/minimal/photos/readme.md)
 
 
 ## Apex CachyOS Kde Gamer's Edition! 🎮
