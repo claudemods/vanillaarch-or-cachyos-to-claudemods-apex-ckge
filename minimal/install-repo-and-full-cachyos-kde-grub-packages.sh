@@ -21,7 +21,7 @@ cat << "EOF"
 EOF
 
 echo -e "${CYAN}"
-echo "           ClaudeMods Vanilla Arch Kde Grub to Apex CKGE Minimal v1.0 27-10-2025"
+echo "           ClaudeMods Vanilla Arch Kde Grub to Apex CKGE Minimal v1.01 04-11-2025"
 echo -e "${NC}"
 echo "================================================================================"
 echo ""
@@ -1379,6 +1379,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 print_status "GRUB configuration updated"
 
 print_info "Setting Plymouth boot animation..."
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/cachyos-bootanimation /usr/share/plymouth/themes/
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/term.sh /usr/local/bin
 sudo chmod +x /usr/local/bin/term.sh
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/term.service /etc/systemd/system/
@@ -1387,6 +1388,8 @@ sudo plymouth-set-default-theme -R cachyos-bootanimation
 print_status "Plymouth theme configured"
 
 print_info "Configuring Fish shell..."
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/claudemods-cyan.colorscheme /home/$USER/.local/share/konsole
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/claudemods-cyan.profile /home/$USER/.local/share/konsole
 mkdir /home/$USER/.config/fish
 cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/config.fish /home/$USER/.config/fish/config.fish
 cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/.zshrc /home/$USER/.zshrc
