@@ -59,7 +59,7 @@
   
 ## Installation Methods
 
-apex ckge minimal
+apex ckge minimal v1.01 install script 1 file left to upload
 
 ```bash
 
