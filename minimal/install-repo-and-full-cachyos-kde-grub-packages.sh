@@ -1404,7 +1404,7 @@ cd /home/$USER && unzip appimages.zip -d /home/$USER/apps
 mkdir /home/$USER/.local/bin
 mkdir /home/$USER/.local/share/plasma
 sudo mkdir /etc/sddm.conf.d
-cd /home/$USER/apps && sudo unzip symlinks.zip -d /home/$USER/.local/bin && sudo unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip Arch-Systemtool.zip -d /opt && sudo unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
+cd /home/$USER/apps && sudo unzip symlinks.zip -d /home/$USER/.local/bin && sudo unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip Arch-Systemtool.zip -d /home/$USER/.config && sudo unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && unzip kio.zip -d /home/$USER/.local/share
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && unzip color-schemes.zip -d /home/$USER/.local/share
 sudo chown $USER /home/$USER/.local/share/plasma
@@ -1414,7 +1414,7 @@ cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && sudo un
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/kde_settings.conf /etc/sddm.conf.d
 unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/autostart.zip -d /home/$USER/.config
 sudo chmod +x /home/$USER/.local/.config/autostart
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && unzip apex-theme.zip -d /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && unzip apex-theme-updated.zip -d /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal
 plasma-apply-colorscheme Apex > /dev/null 2>&1
 mkdir /home/$USER/.icons
 unzip Windows10Dark.zip -d /home/$USER/.icons > /dev/null 2>&1
