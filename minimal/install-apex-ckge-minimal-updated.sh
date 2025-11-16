@@ -140,7 +140,7 @@ chsh -s $(which fish)
 print_status "Fish configuration applied"
 
 print_info "Apply Apex Kde Theme..."
-mkdir -p /etc/sddm.conf.d
+sudo mkdir -p /etc/sddm.conf.d
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && sudo unzip ApexLogin2.zip -d /usr/share/sddm/themes
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/kde_settings.conf /etc/sddm.conf.d
 cd /home/$USER && wget --show-progress --no-check-certificate --continue --tries=10 --timeout=30 --waitretry=5 https://claudemodsreloaded.co.uk/claudemods-desktop/apex-minimal.zip
