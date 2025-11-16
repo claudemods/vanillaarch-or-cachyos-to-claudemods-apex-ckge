@@ -83,7 +83,7 @@ print_status "Extraction completed"
 print_info "Running CachyOS repository setup..."
 sudo ./cachyos-repo.sh
 print_status "Repository setup completed"-ft
-sudo pacman -S --noconfirm unzip wget iptables-nft
+sudo pacman -S unzip wget iptables-nft zlib-ng-compat
 sudo pacman -R --noconfirm virt-manager
 
 print_section "Starting Apex Conversion Process"
