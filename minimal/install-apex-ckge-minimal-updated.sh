@@ -83,7 +83,7 @@ print_status "Extraction completed"
 print_info "Running CachyOS repository setup..."
 sudo ./cachyos-repo.sh
 print_status "Repository setup completed"
-sudo pacman -S --noconfirm unzip
+sudo pacman -S --noconfirm unzip wget
 sudo pacman -R --noconfirm virt-manager
 
 print_section "Starting Apex Conversion Process"
@@ -140,12 +140,11 @@ chsh -s $(which fish)
 print_status "Fish configuration applied"
 
 print_info "Apply Apex Kde Theme..."
-
-sudo mkdir /etc/sddm.conf.d
+mkdir -p /etc/sddm.conf.d
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal && sudo unzip ApexLogin2.zip -d /usr/share/sddm/themes
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/kde_settings.conf /etc/sddm.conf.d
 cd /home/$USER && wget --show-progress --no-check-certificate --continue --tries=10 --timeout=30 --waitretry=5 https://claudemodsreloaded.co.uk/claudemods-desktop/apex-minimal.zip
-cd && wget --show-progress --no-check-certificate --continue --tries=10 --timeout=30 --waitretry=5 https://claudemodsreloaded.co.uk/arch-systemtool/Arch-Systemtool.zip
+cd /home/$USER && wget --show-progress --no-check-certificate --continue --tries=10 --timeout=30 --waitretry=5 https://claudemodsreloaded.co.uk/arch-systemtool/Arch-Systemtool.zip
 sudo unzip -o /home/$USER/Arch-Systemtool.zip -d /opt
 unzip -o /home/$USER/apex-minimal.zip -d /home/$USER
 
