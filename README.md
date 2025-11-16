@@ -61,7 +61,7 @@
   
 ## Installation Methods
 
-apex ckge minimal v1.01 04-11-2025
+apex ckge minimal v1.02 16-11-2025
 
 ```bash
 
