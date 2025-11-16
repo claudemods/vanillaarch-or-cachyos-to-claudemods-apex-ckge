@@ -64,5 +64,10 @@
 apex ckge minimal v1.02 16-11-2025
 
 ```bash
-
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claudemods/vanillaarch-or-cachyos-to-claudemods-apex-ckge/refs/heads/main/minimal/install-from-github.sh)"
+```
+apex ckge full v1.02 16-11-2025
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/claudemods/vanillaarch-or-cachyos-to-claudemods-apex-ckge/refs/heads/main/full/install-from-github.sh)"
+```
