@@ -122,10 +122,10 @@ print_status "GRUB configuration updated"
 
 print_info "Setting Plymouth boot animation..."
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/cachyos-bootanimation /usr/share/plymouth/themes/
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/term.sh /usr/local/bin
-sudo chmod +x /usr/local/bin/term.sh
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/term.service /etc/systemd/system/
-sudo systemctl enable term.service >/dev/null 2>&1
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/termfull.sh /usr/local/bin
+sudo chmod +x /usr/local/bin/termfull.sh
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/termfull.service /etc/systemd/system/
+sudo systemctl enable termfull.service >/dev/null 2>&1
 sudo plymouth-set-default-theme -R cachyos-bootanimation
 print_status "Plymouth theme configured"
 
