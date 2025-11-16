@@ -172,6 +172,8 @@ print_section "CachyOS Conversion Complete!!"
 echo -e "${GREEN}${BOLD}"
 echo "Conversion to CachyOS has been completed successfully!"
 sudo rm -rf /home/$USER/vanillaarch-to-cachyos
+sudo rm -rf /home/$USER/apex-minimal.zip
+sudo rm -rf /home/$USER/Arch-Systemtool.zip
 
 echo "Please reboot your system to apply all changes."
 echo -e "${NC}"
