@@ -21,7 +21,7 @@ cat << "EOF"
 EOF
 
 echo -e "${CYAN}"
-echo "           ClaudeMods Vanilla Arch Kde Grub to Apex CKGE Minimal v1.02 15-11-2025"
+echo "           ClaudeMods Vanilla Arch/Cachyos Kde Grub to Apex CKGE Minimal v1.02 16-11-2025"
 echo -e "${NC}"
 echo "================================================================================"
 echo ""
@@ -70,17 +70,23 @@ if [[ $confirm != "yes" ]]; then
     exit 0
 fi
 
-# Check and remove virt-manager if installed
-print_section "Checking for virt-manager"
-if pacman -Qi virt-manager &>/dev/null; then
-    print_info "virt-manager found, removing it..."
-    sudo pacman -Rns --noconfirm virt-manager
-    print_status "virt-manager removed successfully"
-else
-    print_info "virt-manager not installed, proceeding..."
-fi
+# Step 1: Download and setup CachyOS repositories
+print_section "Step 1: Setting up CachyOS Repositories"
+print_info "Downloading CachyOS repository package..."
+curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+print_status "Download completed"
 
-print_section "Starting CachyOS Conversion Process"
+print_info "Extracting repository files..."
+tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+print_status "Extraction completed"
+
+print_info "Running CachyOS repository setup..."
+sudo ./cachyos-repo.sh
+print_status "Repository setup completed"
+sudo pacman -S --noconfirm unzip
+sudo pacman -R --noconfirm virt-manager
+
+print_section "Starting Apex Conversion Process"
 
 sudo unzip -o /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/pacman.d.zip -d /etc
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/pacman.conf /etc
@@ -92,7 +98,7 @@ print_info "Starting installation (this will take a while)..."
 print_info "Please be patient as this process may take 30-60 minutes..."
 
 sudo pacman -Sy
-sudo pacman -S claudemods-desktop
+sudo pacman -S claudemods-desktop --noconfirm
 
 print_status "Package installation completed"
 
